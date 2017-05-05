@@ -1,0 +1,20 @@
+language: node_js
+node_js: "7"
+
+before_install:
+  # install meteor
+  - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-meteor-packages/master/configure.sh | /bin/sh"
+
+  # install spacejam for testing packages
+  #- "npm install -g spacejam"
+
+env:
+  - PATH=$HOME/.meteor:$PATH
+
+services: mongodb
+
+script:
+  # lint time!
+  - meteor npm run lint
+
+  #- "spacejam test-packages ./"
