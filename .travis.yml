@@ -4,12 +4,13 @@ node_js: "7"
 before_install:
   # install meteor
   - "curl -L https://raw.githubusercontent.com/arunoda/travis-ci-laika/master/configure.sh | /bin/sh"
-  - "export PATH=$HOME/.meteor:$PATH"
+
   # install spacejam for testing packages
   #- "npm install -g spacejam"
 
 env:
   - LAIKA_OPTIONS="-t 5000"
+  - PATH=$HOME/.meteor:$PATH
 
 services: mongodb
 
