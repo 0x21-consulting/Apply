@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "start": "meteor run",
-    "lint": "eslint ./"
+    "lint": "eslint ./{client,server,imports}"
   },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0",
